@@ -1,3 +1,3 @@
-# Template repo
+# Assignment 2
 
-For future generic repo
+Computer network design for building of a bank
