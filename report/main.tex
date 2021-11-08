@@ -1,0 +1,147 @@
+\documentclass{article}
+
+% Global layout
+\usepackage%
+[
+        a4paper,
+        % left=2cm,
+        % right=2cm,
+        % top=2cm,
+        % bottom=2cm,
+        % vmargin=2cm % vertical margins
+        % hmargin=3cm % horizontal margins
+        margin=3cm
+]
+{geometry}
+\usepackage{fancyhdr, graphicx, hyperref, indentfirst, lastpage, setspace}
+
+% Encoding
+\usepackage[utf8]{vntex, inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath, amssymb, gensymb, textcomp}
+
+% Better table
+\usepackage{array, booktabs, multicol, multirow, siunitx, tabularx}
+% Wide tables go here https://tex.stackexchange.com/questions/332902/my-table-doesnt-fit-what-are-my-options
+
+% Better enumerate
+\usepackage{enumitem}
+
+% Graphics
+\usepackage{caption, float}
+
+% Page setup
+\allowdisplaybreaks{} % to have page breaks inside align* environment
+\hypersetup{urlcolor=blue,linkcolor=black,citecolor=red,colorlinks=true}
+\numberwithin{equation}{section}
+\renewcommand{\arraystretch}{1.2} % space between table rows
+
+% Global style setup
+\makeatletter % change font size for not having underfull hbox
+\renewcommand\Huge{\@setfontsize\Huge{22pt}{18}}
+\makeatother
+
+\AtBeginDocument{\renewcommand*\contentsname{Contents}}
+\AtBeginDocument{\renewcommand*\refname{References}}
+\setlength{\headheight}{40pt}
+
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\fancyhead[L]{
+  \begin{tabular}{rl}
+    \begin{picture}(25,15)(0,0)
+    \put(0,-8){\includegraphics[width=8mm, height=8mm]{./assets/hcmut.png}}
+    \end{picture}
+    \begin{tabular}{l}
+      \textbf{\bf \ttfamily University of Technology, Ho Chi Minh City}\\
+      \textbf{\bf \ttfamily Faculty of Computer Science and Engineering}
+    \end{tabular}
+  \end{tabular}
+}
+\fancyhead[R]{
+	\begin{tabular}{l}
+		\tiny \bf \\
+		\tiny \bf
+	\end{tabular}  }
+\fancyfoot{} % clear all footer fields
+\fancyfoot[R]{\scriptsize \ttfamily Page {\thepage}/\pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\footrulewidth}{0.3pt}
+
+\begin{document}
+
+\begin{titlepage}
+  \begin{center}
+    VIETNAM NATIONAL UNIVERSITY, HO CHI MINH CITY \\
+    UNIVERSITY OF TECHNOLOGY \\
+    FACULTY OF COMPUTER SCIENCE AND ENGINEERING
+  \end{center}
+
+  \vspace{1cm}
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{./assets/hcmut.png}
+  \end{figure}
+
+  \vspace{1cm}
+
+  \begin{center}
+    \begin{tabular}{c}
+      \textbf{\Large Computer Networks Lab (CO3094)} \\
+      {}                                             \\
+      \midrule                                       \\
+      \textbf{\Large Report (Semester 211)}          \\
+      {}                                             \\
+      \textbf{\Huge COMPUTER NETWORK DESIGN}         \\
+      \textbf{\Huge FOR BUILDING OF A BANK}          \\
+      {}                                             \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+
+  \vspace{3cm}
+
+  \begin{table}[h]
+    \begin{tabular}{rll}
+      \hspace{1cm} Advisor: & Mr.\ Nguyễn Lê Duy Lai &         \\
+                            &                                  \\
+      Students:             & Nguyễn Thanh Ngân      & 1911667 \\
+                            & Phạm Nhựt Huy          & 1952059 \\
+                            & Nguyễn Hoàng           & 1952255 \\
+    \end{tabular}
+  \end{table}
+
+  \begin{center}
+    {\footnotesize HO CHI MINH CITY, NOVEMBER 2021} \\
+  \end{center}
+\end{titlepage}
+
+%\thispagestyle{empty}
+
+\tableofcontents
+\newpage
+
+\include{./step1.tex}
+
+\newpage
+
+\include{./step2.tex}
+
+\newpage
+
+\include{./step3.tex}
+
+\newpage
+
+\include{./step4.tex}
+
+\newpage
+
+\include{./step5.tex}
+
+\newpage
+
+\include{./step6.tex}
+
+\end{document}
