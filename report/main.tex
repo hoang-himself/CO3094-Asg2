@@ -20,6 +20,11 @@
 \usepackage[english]{babel}
 \usepackage{amsmath, amssymb, gensymb, textcomp}
 
+%%%%%%%%%%%% Bibliography %%%%%%%%%%%%
+\usepackage[english]{babel}
+\usepackage[backend=biber,style=alphabetic,sorting=ynt]{biblatex}
+\usepackage{csquotes}
+
 % Better table
 \usepackage{array, booktabs, multicol, multirow, siunitx, tabularx}
 % Wide tables go here https://tex.stackexchange.com/questions/332902/my-table-doesnt-fit-what-are-my-options
@@ -27,13 +32,24 @@
 % Better enumerate
 \usepackage{enumitem}
 
+%%%%%%%%%%%% Code space %%%%%%%%%%%%
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz}
+\usepackage[framemethod=tikz]{mdframed}
+\usepackage{minted, verbatim} % needs python Pygments and --shell-escape flag
+
 % Graphics
 \usepackage{caption, float}
+
+% Bibliography
+\addbibresource{ref.bib} % references file
+\nocite{*} % include all entries in references section
 
 % Page setup
 \allowdisplaybreaks{} % to have page breaks inside align* environment
 \hypersetup{urlcolor=blue,linkcolor=black,citecolor=red,colorlinks=true}
 \numberwithin{equation}{section}
+\usemintedstyle{emacs} % pygment/code color format
 \renewcommand{\arraystretch}{1.2} % space between table rows
 
 % Global style setup
@@ -67,6 +83,15 @@
 \fancyfoot[R]{\scriptsize \ttfamily Page {\thepage}/\pageref{LastPage}}
 \renewcommand{\headrulewidth}{0.3pt}
 \renewcommand{\footrulewidth}{0.3pt}
+\newenvironment{code}[1]
+{\VerbatimEnvironment%
+  \begin{mdframed}[leftline=false,rightline=false,backgroundcolor=magenta!10,nobreak=false]%
+    \begin{minted}[linenos=true,breaklines,breaksymbolleft=,obeytabs=true,tabsize=2]{#1}%
+}
+{
+    \end{minted}%
+  \end{mdframed}%
+} % TODO Sample codeblock
 
 \begin{document}
 
@@ -124,24 +149,16 @@
 
 \include{./step1.tex}
 
-\newpage
-
 \include{./step2.tex}
-
-\newpage
 
 \include{./step3.tex}
 
-\newpage
-
 \include{./step4.tex}
-
-\newpage
 
 \include{./step5.tex}
 
-\newpage
-
 \include{./step6.tex}
+
+\printbibliography[heading=bibintoc]
 
 \end{document}

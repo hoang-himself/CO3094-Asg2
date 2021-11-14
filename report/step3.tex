@@ -1,9 +1,55 @@
 \section{Network Throughput, Bandwidth and Safety Parameters}
-\subsection{Throughput}
-% TODO
+The parameters of the flow and load of the system (about 80\% at peak hours 9h-11h and 15h-16h) can be shared for Headquarter and Branches as follows:
+\begin{itemize}
+    \item Servers used for updates, web access, database access, ..... The total upload and download capacity is about 500 MB / day.
+\item Each workstation is used for Web browsing, document downloads, customer transactions, ... The total upload and download capacity is about 100 MB / day.
+\item WiFi-connected laptop for customers’ accesses about 50 MB / day.
+\end{itemize}
 
-\subsection{Bandwidth}
-% TODO
+\subsection{Headquarter}
+\subsubsection{Server}
+The total peak hours time in a days is 3 hours (9h-11h and 15h-16h) and may consume up to 80\%. \\
+$$Bandwidth = \, \frac{5*500*0.8}{3*3600}*8 = 1.481Mbps$$
+$$Throughput = \, \frac{5*500}{8*3600}*8 = 0.694Mbps$$
+\subsubsection{Workstation}
+Assume each workstation will work 8 hours a day
+$$Bandwidth = \, \frac{100*100*0.8}{3*3600}*8 = 5.926Mbps$$
+$$Throughput = \, \frac{100*100}{8*3600}*8 = 2.778Mbps$$
+\subsubsection{User}
+Assume that the number of customers in one day is about 200 customers, and in peak
+time is 150 customers. Also, assume that each user access Wifi 8 hours a day.
+$$Bandwidth = \, \frac{150*50}{3*3600}*8 = 5.556Mbps$$
+$$Throughput = \, \frac{200*50}{8*3600}*8 = 2.778Mbps$$
 
-\subsection{Safety Parameters}
-% TODO
+\subsubsection{Total}
+$$Bandwidth = 1.481+5.926+5.556 = 12.963Mbps$$
+$$Throughput = 0.694+2.778+2.778 = 6.25Mbps$$
+
+\subsection{Safety parameters}
+To ensure for the next 10 years, we need to consider the rate 20\% per five years. The first 5 years, the number of customer will still not increase and this number will increase in the next 5 years.
+$$Bandwidth = 12.963*1.2 = 15.556Mbps$$
+$$Throughput =6.25*1.2 = 7.5Mbps$$
+
+\subsection{Branch}
+\subsubsection{Server}
+The total peak hours time in a days is 3 hours (9h-11h and 15h-16h) and may consume up to 80\%. \\
+$$Bandwidth = \, \frac{3*500*0.8}{3*3600}*8 = 0.889Mbps$$
+$$Throughput = \, \frac{3*500}{8*3600}*8 = 0.417Mbps$$
+\subsubsection{Workstation}
+Assume each workstation will work 8 hours a day
+$$Bandwidth = \, \frac{50*100*0.8}{3*3600}*8 = 2.963Mbps$$
+$$Throughput = \, \frac{50*100}{8*3600}*8 = 1.389Mbps$$
+\subsubsection{User}
+Assume that the number of customers in one day is about 140 customers, and in peak
+time is 70 customers. Also, assume that each user access Wifi 8 hours a day.
+$$Bandwidth = \, \frac{70*50}{3*3600}*8 = 2.593Mbps$$
+$$Throughput = \, \frac{140*50}{8*3600}*8 = 2.778Mbps$$
+
+\subsubsection{Total}
+$$Bandwidth = 0.889+2.963+2.593= 6.445Mbps$$
+$$Throughput =0.417+1.389+2.778= 4.584Mbps$$
+
+\subsection{Safety parameters}
+To ensure for the next 10 years, we need to consider the rate 20\% per five years. The first 5 years, the number of customer will still not increase and this number will increase in the next 5 years.
+$$Bandwidth = 6.445*1.2 = 7.734Mbps$$
+$$Throughput =4.584*1.2 = 5.501Mbps$$

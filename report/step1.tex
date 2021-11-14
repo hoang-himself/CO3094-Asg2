@@ -1,23 +1,46 @@
-\section{Requirement Analysis}
+\section{Requirements Analysis}
 \subsection{Requirements}
 \subsubsection{Functional requirements}
-% TODO
+\begin{itemize}
+  \item 3 local area networks: one for the headquarters, and two for the branches in Nha Trang and Da Nang
+  \item Wide area network connecting from the headquarters to the branches
+  \item Use new technologies for network infrastructures 100/1000 Mbps wired and wireless connections
+  \item \textbf{Headquarters}: 100 workstations, 5 servers, 12 network devices or more with security devices
+  \item \textbf{Branches}: 50 workstations, 3 servers, 5 network devices or more with security devices
+\end{itemize}
 
 \subsubsection{Non-functional requirements}
-% TODO
+\begin{itemize}
+  \item The network is organized according to the VLAN structure
+  \item Use both \textbf{licensed} and \textbf{open-source} software, office applications, client-server applications, multimedia and database
+  \item \textbf{High security}: System must be able to prevent network attacks like DDoS, MiTM,\dots
+  \item \textbf{Robust}: Handle all inputs, expected and unexpected
+  \item \textbf{Scalable}: The network can be extended by adding more devices
+  \item \textbf{Total upload, download}: Servers: 500 MB/day; Workstations: 100 MB/day; WiFi: 50 MB/day
+  \item \textbf{Growth rate}: At least 20\% every 5 years
+\end{itemize}
 
-\subsection{Survey Checklist}
-\subsubsection{Headquarters}
-% TODO
-
-\subsubsection{Branches}
-% TODO
-
-\subsection{Network Structure}
-% TODO
+\subsection{Checklist}
+\begin{itemize}
+  \item Hardware availability
+  \item Hardware location and distribution
+\end{itemize}
 
 \subsection{High Load Areas}
-% TODO
+It is expected that a lot of operations are executed at the servers, thus a lot of data will go through this area.
+High load areas should be at where the server density is the highest.
+
+\subsection{Network Structure}
+% https://en.wikipedia.org/wiki/Network_topology
+We will use the tree-topology with a central switch as the root node, connecting to the smaller networks.
+These smaller networks will make use of star-topology as there are multiple devices connecting to a common router.
 
 \subsection{Wireless Coverage}
-% TODO
+\begin{itemize}
+  \item The wireless design at the HQ is similar to the design at the branches
+  \item Preferably, each floor will have one wireless AP
+  \item APs are connected to routers so as to provide DHCP capability
+  \item Up to 253 users can be connected to the standard channel 1--2.412GHz
+  \item Use WPA2-PSK with AES for authentication
+  \item Forbid pinging local subnet devices from another subnet
+\end{itemize}
