@@ -2,58 +2,51 @@
 \subsection{Re-evaluation of the design}
 \subsubsection{Reliability}
 \begin{itemize}
-    \item The message sent by network devices are receivable to the receivers.
-    \item Our system might have packet loss. This might be occurred in the first route or ping because the network need to fill the MAC table of the switch. After this time, our system will deliver packets more easier with less packet loss.
+  \item The message sent by network devices are receivable to the receivers.
+  \item Our system might have packet loss. This might be occurred in the first route or ping because the network need to fill the MAC table of the switch. After this time, our system will deliver packets more easier with less packet loss.
 \end{itemize}
 
 \subsubsection{Easy to Upgrade}
 \begin{itemize}
-    \item Each subnet in a single networkcan provide up to 253 users, so our system can add and remove devices easily.
-    \item When we want to add new branch to the network, we just add and configure new router corresponding to that branch. Then, connect to Headquarter router through WAN links.
+  \item Each subnet in a single networkcan provide up to 253 users, so our system can add and remove devices easily.
+  \item When we want to add new branch to the network, we just add and configure new router corresponding to that branch. Then, connect to Headquarter router through WAN links.
 \end{itemize}
 
 \subsubsection{Diversity of Supporting Software}
 Not only the Ethernet connection, our network system also provide wireless router for the wireless devices to access the Internet.
 
 \subsubsection{Scalability}
-\begin{itemize} 
-        \item The use of network equipment from Cisco 
-helps us to have better technical support, more stable equipment, and especially in
-Cisco products that are often integrated, available new technologies.
-    \item For the problem of bandwidth, with the increment rate of 20\% per 5 years so when we will safety factor of 20\% to make sure the network can have good performance for the next 10 years.
+\begin{itemize}
+  \item The use of network equipment from Cisco
+        helps us to have better technical support, more stable equipment, and especially in
+        Cisco products that are often integrated, available new technologies.
+  \item For the problem of bandwidth, with the increment rate of 20\% per 5 years so when we will safety factor of 20\% to make sure the network can have good performance for the next 10 years.
 \end{itemize}
 
 \subsubsection{Safety}
 \begin{itemize}
-    \item Support the mechanism to restrict IP address to come in and out of the Internet
-    \item Servers are placed in a separate switch with their own VLANs and they connect to gateway routers through a separate port. Since this, our system can implement network configurations to enhance the network's security more conveniently.
-    \item Providing security for wireless network by  applying ACL tables to limit the access from wireless devices to other devices
-    \item Applying mechanism to prevent the wireless devices ping to other devices.    
-    \item Sensitive data is kept confidential when there are packet theft attacks
+  \item Support the mechanism to restrict IP address to come in and out of the Internet
+  \item Servers are placed in a separate switch with their own VLANs and they connect to gateway routers through a separate port. Since this, our system can implement network configurations to enhance the network's security more conveniently.
+  \item Providing security for wireless network by  applying ACL tables to limit the access from wireless devices to other devices
+  \item Applying mechanism to prevent the wireless devices ping to other devices.
+  \item Sensitive data is kept confidential when there are packet theft attacks
 \end{itemize}
 
 \subsection{Remaining Problems}
-\subsubsection{Security}
 \begin{itemize}
-    \item Although the ACL limit the IP from wireless access to ping other devices, this can also restrict the inter Network to receive message when the servers ping to the Internet
-    \item The wifi password might be easy to guess
-
-\end{itemize}
-
-\subsubsection{Scalability}
-\begin{itemize}
-    \item Our network system can support up to 15 branches, so in the future, if the bank have more branches, there should be another enhancement in the network to adapt the scalability of the bank.
-    \item Serial link for inter-branch may cause bottleneck problem when the bank grower bigger.
-
+  \item Although the ACL limit the IP from wireless access to ping other devices, this can also restrict the inner network from receiving messages when the servers connect to the Internet
+  \item This structure suffers from single point of failure
+  \item Our network system can support up to 15 branches, so in the future, if the bank have more branches, there should be another enhancement in the network to adapt the scalability of the bank.
+  \item HQ router for inter-branch connections may cause bottleneck problem when the bank grow bigger
 \end{itemize}
 
 \subsection{Development Orientation}
 \begin{itemize}
-    \item Enhance security of the network to protect customer's data.
-    \item Implement the ping from the Inter Network to Web server
-    \item Conduct a detailed actual survey of the lines, structure of the wall and floor to
-install the equipment
-\item Use professional security measures, build a network security room to detect and
-resolve situations in real time
-\item Find the ways to improve the network when the bank grow bigger with the lowest cost with the good performance. A bank usually have a long life span, so we need to make the network to have a long life span as most as possible with the easiest maintenance.
+  \item Enhance security of the network to protect customer's data.
+  \item Implement the ping from the Inter Network to Web server
+  \item Conduct a detailed actual survey of the lines, structure of the wall and floor to
+        install the equipment
+  \item Use professional security measures, build a network security room to detect and
+        resolve situations in real time
+  \item Find the ways to improve the network when the bank grow bigger with the lowest cost with the good performance. A bank usually have a long life span, so we need to make the network to have a long life span as most as possible with the easiest maintenance.
 \end{itemize}
